@@ -156,7 +156,7 @@ if (tmp == sum) {
 }
 ```
 
-11. Check the given number is armstrong number or not
+# 11. Check the given number is armstrong number or not
 
 ```
 let num = 153;
@@ -185,7 +185,7 @@ if (sum == tmp) {
 }
 ```
 
-11. Check the given number is strong number or not
+# 12. Check the given number is strong number or not
 
 ```
 let num = 145;
@@ -207,7 +207,7 @@ if (tmp == sum) {
 }
 ```
 
-# 11. Check the given number is perfect number or not
+# 13. Check the given number is perfect number or not
 
 ```
 let num = 6;
@@ -225,7 +225,7 @@ if (sum == num) {
 }
 ```
 
-# 12. automorphic number
+# 14. automorphic number
 
 ```
 let num = 25;
