@@ -206,3 +206,47 @@ if (tmp == sum) {
   console.log(`${tmp} != ${sum}. It's not a strong number`);
 }
 ```
+
+# 11. Check the given number is perfect number or not
+
+```
+let num = 6;
+
+let sum = 0;
+for (let i = 1; i < num; i++) {
+  if (num % i == 0) {
+    sum += i;
+  }
+}
+if (sum == num) {
+  console.log("it is a perfect number");
+} else {
+  console.log("it is not a perfect number");
+}
+```
+
+# 12. automorphic number
+
+```
+let num = 25;
+let tmp = num;
+let count = 0;
+let sum = 0;
+let rem;
+
+while (num) {
+  num = Math.trunc(num / 10);
+  count++;
+}
+
+num = tmp;
+let mul = num * num;
+
+let temp = mul % Math.pow(10, count);
+
+if (temp === tmp) {
+  console.log(`${tmp} is an automorphic number`);
+} else {
+  console.log(`${tmp} is not an automorphic number`);
+}
+```

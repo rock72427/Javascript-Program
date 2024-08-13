@@ -1,18 +1,22 @@
-// Check the given number is strong number or not
-let num = 145;
+// automorphic number
+let num = 25;
 let tmp = num;
+let count = 0;
 let sum = 0;
+let rem;
+
 while (num) {
-  let rem = num % 10;
-  let fact = 1;
-  for (let i = 2; i <= rem; i++) {
-    fact = fact * i;
-  }
-  sum += fact;
   num = Math.trunc(num / 10);
+  count++;
 }
-if (tmp == sum) {
-  console.log(`${tmp} == ${sum}. It's a strong number`);
+
+num = tmp;
+let mul = num * num;
+
+let temp = mul % Math.pow(10, count);
+
+if (temp === tmp) {
+  console.log(`${tmp} is an automorphic number`);
 } else {
-  console.log(`${tmp} != ${sum}. It's not a strong number`);
+  console.log(`${tmp} is not an automorphic number`);
 }
