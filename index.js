@@ -1,14 +1,18 @@
-// check the given number is palindrom or not
-let num = 12345;
+// Check the given number is strong number or not
+let num = 145;
 let tmp = num;
-let rev = 0;
+let sum = 0;
 while (num) {
   let rem = num % 10;
-  rev = rev * 10 + rem;
+  let fact = 1;
+  for (let i = 2; i <= rem; i++) {
+    fact = fact * i;
+  }
+  sum += fact;
   num = Math.trunc(num / 10);
 }
-if (tmp == rev) {
-  console.log("The number is a palindrome");
+if (tmp == sum) {
+  console.log(`${tmp} == ${sum}. It's a strong number`);
 } else {
-  console.log("The number is not a palindrome");
+  console.log(`${tmp} != ${sum}. It's not a strong number`);
 }
