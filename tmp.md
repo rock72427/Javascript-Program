@@ -250,3 +250,207 @@ if (temp === tmp) {
   console.log(`${tmp} is not an automorphic number`);
 }
 ```
+
+# 15. Write a program to print palindrom number in a given range
+
+```
+for (let i = 1; i <= 100; i++) {
+  let rev = 0;
+  let num = i;
+  while (num) {
+    let rem = num % 10;
+    rev = rev * 10 + rem;
+    num = Math.trunc(num / 10);
+  }
+  if (i == rev) {
+    console.log(`${i} is a palindrome`);
+  }
+}
+```
+
+# 16. Write a program to print alternative palindrome
+
+```
+let count = 0;
+for (let i = 1; i <= 100; i++) {
+  let rev = 0;
+  let num = i;
+  while (num) {
+    let rem = num % 10;
+    rev = rev * 10 + rem;
+    num = Math.trunc(num / 10);
+  }
+
+  if (i == rev) {
+    if (count % 2 == 0) {
+      console.log(`${i} is a palindrome`);
+    }
+    count++;
+  }
+}
+
+```
+
+# 17. Write a program to find second highest palindrom in a given range
+
+```
+let max = 0,
+  secondmax = 0;
+for (let i = 1; i <= 100; i++) {
+  let rev = 0;
+  let num = i;
+  while (num) {
+    let rem = num % 10;
+    rev = rev * 10 + rem;
+    num = Math.trunc(num / 10);
+  }
+
+  if (i == rev) {
+    if (i > max) {
+      secondmax = max;
+      max = i;
+    }
+  }
+}
+console.log(secondmax);
+```
+
+# 18. Write a program to find second highest palindrom in a given range
+
+```
+let count = 1;
+for (let i = 100; i >= 1; i--) {
+  let rev = 0;
+  let num = i;
+  while (num) {
+    let rem = num % 10;
+    rev = rev * 10 + rem;
+    num = Math.trunc(num / 10);
+  }
+  if (i == rev) {
+    if (count == 2) {
+      console.log(`${i} is a palindrome`);
+      break;
+    }
+    count++;
+  }
+}
+```
+
+# 19. Write a program to print next palindrom number
+
+```
+let num = 77;
+let next = num + 1;
+
+while (true) {
+  let rev = 0;
+  let tmp = next;
+  while (tmp) {
+    let rem = tmp % 10;
+    rev = rev * 10 + rem;
+    tmp = Math.trunc(tmp / 10);
+  }
+  if (next == rev) {
+    console.log(next);
+    break;
+  }
+  next++;
+}
+```
+
+# 20. Print prime number in a given range
+
+```
+for (let i = 2; i <= 50; i++) {
+  let flag = true;
+  for (let j = 2; j * j <= i; j++) {
+    if (i % j == 0) {
+      flag = false;
+      break;
+    }
+  }
+  if (flag) {
+    console.log(i);
+  }
+}
+```
+
+# 21. Alternative prime number
+
+```
+let count = 0;
+for (let i = 2; i <= 50; i++) {
+  let flag = true;
+  for (let j = 2; j * j <= i; j++) {
+    if (i % j == 0) {
+      flag = false;
+      break;
+    }
+  }
+  if (flag) {
+    if (count % 2 == 0) {
+      console.log(i);
+    }
+    count++;
+  }
+}
+```
+
+# 22. Print last 3 prime number in a given range
+
+```
+let start = 2;
+let end = 50;
+let count = 0;
+let three = [];
+
+for (let i = end; i >= start; i--) {
+  let flag = true;
+  for (let j = 2; j * j <= i; j++) {
+    if (i % j == 0) {
+      flag = false;
+      break;
+    }
+  }
+  if (flag) {
+    three.push(i);
+    count++;
+    if (count == 3) {
+      break;
+    }
+  }
+}
+console.log(three);
+```
+
+# 23. Print first 3 prime number in a given range
+
+```
+let start = 2;
+let end = 50;
+let count = 0;
+let three = [];
+
+for (let i = start; i <= end; i++) {
+  let flag = true;
+  for (let j = 2; j * j <= i; j++) {
+    if (i % j == 0) {
+      flag = false;
+      break;
+    }
+  }
+  if (flag) {
+    three.push(i);
+    count++;
+    if (count == 3) {
+      break;
+    }
+  }
+}
+console.log(three);
+```
+
+# 24. Print next prime number
+
+# 25. take user number given next number to get prime number
