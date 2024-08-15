@@ -362,95 +362,182 @@ while (true) {
 # 20. Print prime number in a given range
 
 ```
-for (let i = 2; i <= 50; i++) {
-  let flag = true;
-  for (let j = 2; j * j <= i; j++) {
-    if (i % j == 0) {
-      flag = false;
-      break;
+function main() {
+  for (let i = 1; i <= 20; i++) {
+    if (i <= 1) continue;
+    if (isPrime(i)) {
+      console.log(i);
     }
   }
-  if (flag) {
-    console.log(i);
-  }
 }
+
+function isPrime(num) {
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+main();
 ```
 
 # 21. Alternative prime number
 
 ```
-let count = 0;
-for (let i = 2; i <= 50; i++) {
-  let flag = true;
-  for (let j = 2; j * j <= i; j++) {
-    if (i % j == 0) {
-      flag = false;
-      break;
+function main() {
+  let count = 0;
+
+  for (let i = 2; i <= 20; i++) {
+    if (isPrime(i)) {
+      count++;
+      if (count % 2 === 0) {
+        console.log(i);
+      }
     }
-  }
-  if (flag) {
-    if (count % 2 == 0) {
-      console.log(i);
-    }
-    count++;
   }
 }
+
+function isPrime(num) {
+  if (num <= 1) return false;
+  if (num === 2) return true;
+
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+main();
 ```
 
 # 22. Print last 3 prime number in a given range
 
 ```
-let start = 2;
-let end = 50;
-let count = 0;
-let three = [];
 
-for (let i = end; i >= start; i--) {
-  let flag = true;
-  for (let j = 2; j * j <= i; j++) {
-    if (i % j == 0) {
-      flag = false;
-      break;
-    }
-  }
-  if (flag) {
-    three.push(i);
-    count++;
-    if (count == 3) {
-      break;
-    }
-  }
+let a = 2;
+let b = 50;
+let primes = [];
+for (let i = a; i <= b; i++) {
+let flag = true;
+
+for (let j = 2; j \* j <= i; j++) {
+if (i % j === 0) {
+flag = false;
+break;
 }
-console.log(three);
+}
+
+if (flag && i > 1) {
+primes.push(i);
+}
+}
+
+if (primes.length >= 3) {
+console.log(primes.slice(-3));
+} else {
+console.log("Less than 3 prime numbers found in the range.");
+}
+
 ```
 
 # 23. Print first 3 prime number in a given range
 
 ```
+
 let start = 2;
 let end = 50;
 let count = 0;
 let three = [];
 
 for (let i = start; i <= end; i++) {
-  let flag = true;
-  for (let j = 2; j * j <= i; j++) {
-    if (i % j == 0) {
-      flag = false;
-      break;
-    }
-  }
-  if (flag) {
-    three.push(i);
-    count++;
-    if (count == 3) {
-      break;
-    }
-  }
+let flag = true;
+
+for (let j = 2; j \* j <= i; j++) {
+if (i % j === 0) {
+flag = false;
+break;
 }
+}
+
+if (flag) {
+three.push(i);
+count++;
+
+    if (count === 3) {
+      break;
+    }
+
+}
+}
+
 console.log(three);
+
 ```
 
 # 24. Print next prime number
 
 # 25. take user number given next number to get prime number
+
+# 26. write a program to print automorphic numbers in a given range
+
+```
+function main() {
+  for (let i = 1; i <= 50; i++) {
+    if (automorphic(i)) {
+      console.log(i);
+    }
+  }
+}
+function automorphic(num) {
+  let tmp = num;
+  let count = 0;
+  while (num) {
+    num = Math.trunc(num / 10);
+    count++;
+  }
+
+  num = tmp;
+  let mul = num * num;
+
+  let temp = mul % Math.pow(10, count);
+  return temp == tmp;
+}
+main();
+```
+
+```
+let res = "";
+for (let i = 1; i <= 5; i++) {
+  for (let j = 1; j <= 5; j++) {
+    res += "*";
+  }
+  res += "\n";
+}
+console.log(res);
+```
+
+```
+let res = "";
+for (let i = 1; i <= 5; i++) {
+  for (let j = 1; j <= 5; j++) {
+    res += i;
+  }
+  res += "\n";
+}
+console.log(res);
+```
+
+```
+let res = "";
+for (let i = 1; i <= 5; i++) {
+  for (let j = 1; j <= i; j++) {
+    res += "*";
+  }
+  res += "\n";
+}
+console.log(res);
+```
