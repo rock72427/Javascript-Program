@@ -682,30 +682,313 @@ for (let i = 1; i <= 5; i++) {
 console.log(res);
 ```
 
-# Diamond Patter
+# 33.
 
 ```
-let n = 5;
+*****
 
-for (let i = 0; i < n; i++) {
-  let row = "";
-  for (let j = 0; j < n - i - 1; j++) {
-    row += " ";
-  }
-  for (let k = 0; k <= i; k++) {
-    row += "* ";
-  }
-  console.log(row);
-}
+*****
 
-for (let i = n - 2; i >= 0; i--) {
-  let row = "";
-  for (let j = 0; j < n - i - 1; j++) {
-    row += " ";
+*****
+```
+
+```
+let res = "";
+for (let i = 1; i <= 5; i++) {
+  for (let j = 1; j <= 5; j++) {
+    if (i % 2 != 0) {
+      res += "*";
+    } else {
+      res += " ";
+    }
   }
-  for (let k = 0; k <= i; k++) {
-    row += "* ";
-  }
-  console.log(row);
+  res += "\n";
 }
+console.log(res);
+```
+
+# 34.
+
+```
+* * * * *
+*   *   *
+* * * * *
+*   *   *
+* * * * *
+```
+
+```
+let res = "";
+for (let i = 1; i <= 5; i++) {
+  for (let j = 1; j <= 5; j++) {
+    if (i % 2 != 0 || j == 5 || j == 1 || j == 3) {
+      // if (i == j || i + j == 6) {
+      res += "* ";
+    } else {
+      res += "  ";
+    }
+  }
+  res += "\n";
+}
+console.log(res);
+```
+
+# 35.
+
+```
+*   *   *
+*   *   *
+*   *   *
+*   *   *
+*   *   *
+```
+
+```
+let res = "";
+for (let i = 1; i <= 5; i++) {
+  for (let j = 1; j <= 5; j++) {
+    if (j % 2 != 0) {
+      res += "* ";
+    } else {
+      res += "  ";
+    }
+  }
+  res += "\n";
+}
+console.log(res);
+```
+
+# 36.
+
+```
+1 * * * *
+* 2 * * *
+* * 3 * *
+* * * 4 *
+* * * * 5
+```
+
+```
+let res = "";
+for (let i = 1; i <= 5; i++) {
+  for (let j = 1; j <= 5; j++) {
+    if (i == j) {
+      res += `${i} `;
+    } else {
+      res += "* ";
+    }
+  }
+  res += "\n";
+}
+console.log(res);
+```
+
+# 37.
+
+```
+1 * * * 1
+* 2 * 2 *
+* * 3 * *
+* 4 * 4 *
+5 * * * 5
+```
+
+```
+let res = "";
+for (let i = 1; i <= 5; i++) {
+  for (let j = 1; j <= 5; j++) {
+    if (i == j || i + j == 6) {
+      res += `${i} `;
+    } else {
+      res += "* ";
+    }
+  }
+  res += "\n";
+}
+console.log(res);
+```
+
+# 38.
+
+```
+1
+2 1
+3 2 1
+4 3 2 1
+5 4 3 2 1
+```
+
+```
+let res = "";
+for (let i = 1; i <= 5; i++) {
+  for (let j = i; j >= 1; j--) {
+    res += `${j} `;
+  }
+  res += "\n";
+}
+console.log(res);
+```
+
+# 39.
+
+```
+5
+4 5
+3 4 5
+2 3 4 5
+1 2 3 4 5
+```
+
+```
+let res = "";
+for (let i = 5; i >= 1; i--) {
+  for (let j = i; j <= 5; j++) {
+    res += `${j} `;
+  }
+  res += "\n";
+}
+console.log(res);
+```
+
+# 40
+
+```
+5
+5 4
+5 4 3
+5 4 3 2
+5 4 3 2 1
+```
+
+```
+let res = "";
+for (let i = 5; i >= 1; i--) {
+  for (let j = 5; j >= i; j--) {
+    res += `${j} `;
+  }
+  res += "\n";
+}
+console.log(res);
+```
+
+# 41.
+
+```
+*
+* *
+7 8 9
+* * * *
+* * * * *
+```
+
+```
+let res = "";
+let a = 7;
+for (let i = 1; i <= 5; i++) {
+  for (let j = 1; j <= i; j++) {
+    if (i == 3) {
+      res += `${a++} `;
+    } else {
+      res += "* ";
+    }
+  }
+  res += "\n";
+}
+console.log(res);
+```
+
+# 42.
+
+```
+* * * * *
+  * * * *
+    * * *
+      * *
+        *
+```
+
+```
+let res = "";
+for (let i = 5; i >= 1; i--) {
+  for (let j = 5; j > i; j--) {
+    res += "  ";
+  }
+  for (let j = 1; j <= i; j++) {
+    res += "* ";
+  }
+  res += "\n";
+}
+console.log(res);
+```
+
+# 43.
+
+```
+1 2 3 4 5
+  2 3 4 5
+    3 4 5
+      4 5
+        5
+```
+
+```
+let res = "";
+for (let i = 1; i <= 5; i++) {
+  for (let j = 1; j < i; j++) {
+    res += "  ";
+  }
+  for (let j = i; j <= 5; j++) {
+    res += j + " ";
+  }
+  res += "\n";
+}
+console.log(res);
+```
+
+# 44.
+
+```
+1 2 3 4 5
+  1 2 3 4
+    1 2 3
+      1 2
+        1
+```
+
+```
+let res = "";
+for (let i = 5; i >= 1; i--) {
+  for (let j = 5; j > i; j--) {
+    res += "  ";
+  }
+  for (let j = 1; j <= i; j++) {
+    res += j + " ";
+  }
+  res += "\n";
+}
+console.log(res);
+```
+
+# 45.
+
+```
+5 4 3 2 1
+  5 4 3 2
+    5 4 3
+      5 4
+        5
+```
+
+```
+let res = "";
+for (let i = 5; i >= 1; i--) {
+  for (let j = 5; j > i; j--) {
+    res += "  ";
+  }
+  for (let j = 5; j >= 6 - i; j--) {
+    res += j + " ";
+  }
+  res += "\n";
+}
+console.log(res);
 ```
