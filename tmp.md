@@ -363,8 +363,7 @@ while (true) {
 
 ```
 function main() {
-  for (let i = 1; i <= 20; i++) {
-    if (i <= 1) continue;
+for (let i = 2; i <= 20; i++) {
     if (isPrime(i)) {
       console.log(i);
     }
@@ -417,70 +416,120 @@ main();
 # 22. Print last 3 prime number in a given range
 
 ```
-
-let a = 2;
-let b = 50;
-let primes = [];
-for (let i = a; i <= b; i++) {
-let flag = true;
-
-for (let j = 2; j \* j <= i; j++) {
-if (i % j === 0) {
-flag = false;
-break;
-}
-}
-
-if (flag && i > 1) {
-primes.push(i);
-}
+function main() {
+  let count = 0;
+  for (let i = 20; i >= 2; i--) {
+    if (isPrime(i)) {
+      console.log(i);
+      count++;
+      if (count >= 3) {
+        break;
+      }
+    }
+  }
 }
 
-if (primes.length >= 3) {
-console.log(primes.slice(-3));
-} else {
-console.log("Less than 3 prime numbers found in the range.");
+function isPrime(num) {
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+
+  return true;
 }
 
+main();
 ```
 
 # 23. Print first 3 prime number in a given range
 
 ```
-
-let start = 2;
-let end = 50;
-let count = 0;
-let three = [];
-
-for (let i = start; i <= end; i++) {
-let flag = true;
-
-for (let j = 2; j \* j <= i; j++) {
-if (i % j === 0) {
-flag = false;
-break;
-}
-}
-
-if (flag) {
-three.push(i);
-count++;
-
-    if (count === 3) {
-      break;
+function main() {
+  let count = 0;
+  for (let i = 2; i <= 20; i++) {
+    if (isPrime(i)) {
+      console.log(i);
+      count++;
+      if (count >= 3) {
+        break;
+      }
     }
-
+  }
 }
+
+function isPrime(num) {
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+
+  return true;
 }
 
-console.log(three);
-
+main();
 ```
 
 # 24. Print next prime number
 
+```
+function main() {
+  const num = 11;
+  let i = num + 1;
+
+  while (true) {
+    if (isPrime(i)) {
+      console.log(i);
+      break;
+    }
+    i++;
+  }
+}
+
+function isPrime(num) {
+  if (num <= 1) return false;
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+main();
+```
+
 # 25. take user number given next number to get prime number
+
+```
+function main() {
+  const num = 19;
+  let i = num + 1;
+  let steps = 0;
+
+  while (true) {
+    steps++;
+    if (isPrime(i)) {
+      console.log(steps);
+      break;
+    }
+    i++;
+  }
+}
+
+function isPrime(num) {
+  if (num <= 1) return false;
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+main();
+```
 
 # 26. write a program to print automorphic numbers in a given range
 
@@ -509,6 +558,16 @@ function automorphic(num) {
 main();
 ```
 
+# 27.
+
+```
+*****
+*****
+*****
+*****
+*****
+```
+
 ```
 let res = "";
 for (let i = 1; i <= 5; i++) {
@@ -518,6 +577,16 @@ for (let i = 1; i <= 5; i++) {
   res += "\n";
 }
 console.log(res);
+```
+
+# 28.
+
+```
+11111
+22222
+33333
+44444
+55555
 ```
 
 ```
@@ -531,6 +600,16 @@ for (let i = 1; i <= 5; i++) {
 console.log(res);
 ```
 
+# 29.
+
+```
+*
+**
+***
+****
+*****
+```
+
 ```
 let res = "";
 for (let i = 1; i <= 5; i++) {
@@ -540,4 +619,101 @@ for (let i = 1; i <= 5; i++) {
   res += "\n";
 }
 console.log(res);
+```
+
+# 30.
+
+```
+*****
+****
+***
+**
+*
+```
+
+```
+let res = "";
+for (let i = 1; i <= 5; i++) {
+  for (let j = 5; j >= i; j--) {
+    res += "*";
+  }
+  res += "\n";
+}
+console.log(res);
+```
+
+# 31.
+
+```
+*****
+*
+*
+*
+*
+```
+
+```
+let res = "";
+for (let i = 1; i <= 5; i++) {
+  for (let j = 1; j <= 5; j++) {
+    if (i == 1 || j == 1) {
+      res += "*";
+    }
+  }
+  res += "\n";
+}
+console.log(res);
+```
+
+# 32.
+
+```
+* * * * *
+*       *
+*       *
+*       *
+* * * * *
+```
+
+```
+let res = "";
+for (let i = 1; i <= 5; i++) {
+  for (let j = 1; j <= 5; j++) {
+    if (i == 1 || i == 5 || j == 1 || j == 5) {
+      res += "* ";
+    } else {
+      res += "  ";
+    }
+  }
+  res += "\n";
+}
+console.log(res);
+```
+
+# Diamond Patter
+
+```
+let n = 5;
+
+for (let i = 0; i < n; i++) {
+  let row = "";
+  for (let j = 0; j < n - i - 1; j++) {
+    row += " ";
+  }
+  for (let k = 0; k <= i; k++) {
+    row += "* ";
+  }
+  console.log(row);
+}
+
+for (let i = n - 2; i >= 0; i--) {
+  let row = "";
+  for (let j = 0; j < n - i - 1; j++) {
+    row += " ";
+  }
+  for (let k = 0; k <= i; k++) {
+    row += "* ";
+  }
+  console.log(row);
+}
 ```

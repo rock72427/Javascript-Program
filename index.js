@@ -1,8 +1,26 @@
-let res = "";
-for (let i = 1; i <= 5; i++) {
-  for (let j = 1; j <= i; j++) {
-    res += "*";
+function main() {
+  const num = 19;
+  let i = num + 1;
+  let steps = 0;
+
+  while (true) {
+    steps++;
+    if (isPrime(i)) {
+      console.log(steps);
+      break;
+    }
+    i++;
   }
-  res += "\n";
 }
-console.log(res);
+
+function isPrime(num) {
+  if (num <= 1) return false;
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+main();
