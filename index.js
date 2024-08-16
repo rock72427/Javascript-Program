@@ -1,26 +1,23 @@
-function main() {
-  const num = 19;
-  let i = num + 1;
-  let steps = 0;
+// 1 2 3 4 5
+//   2 3 4 5
+//     3 4 5
+//       4 5
+//         5
 
-  while (true) {
-    steps++;
-    if (isPrime(i)) {
-      console.log(steps);
-      break;
-    }
-    i++;
-  }
-}
+// 1 2 3 4 5
+//   1 2 3 4
+//     1 2 3
+//       1 2
+//         1
 
-function isPrime(num) {
-  if (num <= 1) return false;
-  for (let i = 2; i < num; i++) {
-    if (num % i === 0) {
-      return false;
-    }
-  }
-  return true;
-}
+// 5 4 3 2 1
+//   5 4 3 2
+//     5 4 3
+//       5 4
+//         5
 
-main();
+// 5 4 3 2 1
+//   4 3 2 1
+//     3 2 1
+//       2 1
+//         1

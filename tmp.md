@@ -386,31 +386,23 @@ main();
 # 21. Alternative prime number
 
 ```
+main();
 function main() {
-  let count = 0;
-
-  for (let i = 2; i <= 20; i++) {
+  for (let i = 20; i >= 2; i--) {
     if (isPrime(i)) {
-      count++;
-      if (count % 2 === 0) {
-        console.log(i);
-      }
+      console.log(i);
     }
   }
 }
-
 function isPrime(num) {
-  if (num <= 1) return false;
-  if (num === 2) return true;
-
-  for (let i = 2; i <= Math.sqrt(num); i++) {
-    if (num % i === 0) {
+  for (let i = 2; i < num; i++) {
+    if (num % i == 0) {
       return false;
     }
   }
   return true;
 }
-main();
+
 ```
 
 # 22. Print last 3 prime number in a given range
