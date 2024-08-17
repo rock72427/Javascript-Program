@@ -1,4 +1,4 @@
-# 1. Write a program to print number from 100 to 200
+## 1. Write a program to print number from 100 to 200
 
 ```
 for (let i = 100; i <= 200; i++) {
@@ -6,7 +6,7 @@ console.log(i);
 }
 ```
 
-# 2. Write a program to find number of digit in given number
+## 2. Write a program to find number of digit in given number
 
 ```
 let num = 12345;
@@ -19,7 +19,7 @@ console.log(count);
 
 ```
 
-# 3. Write a program to find sum of digit in a given number
+## 3. Write a program to find sum of digit in a given number
 
 ```
 let num = 65876;
@@ -33,7 +33,7 @@ while (num) {
 console.log(sum);
 ```
 
-# 4. Write a program to find smallest digit in given number
+## 4. Write a program to find smallest digit in given number
 
 ```
 let num = 876543;
@@ -50,7 +50,7 @@ console.log(small);
 
 ```
 
-# 5. Write a program to find greatest digit in a given number
+## 5. Write a program to find greatest digit in a given number
 
 ```
 let num = 8765943;
@@ -66,7 +66,7 @@ while (num) {
 console.log(max);
 ```
 
-# 6. Sum of even and sum of odd
+## 6. Sum of even and sum of odd
 
 ```
 let num = 123456;
@@ -84,7 +84,7 @@ while (num) {
 console.log(`Even: ${even}. Odd: ${odd}`);
 ```
 
-# 7. Write a program to reverse a given number
+## 7. Write a program to reverse a given number
 
 ```
 let num = 12345;
@@ -97,7 +97,7 @@ while (num) {
 console.log(rev);
 ```
 
-# 8. check the given number is palindrom or not
+## 8. check the given number is palindrom or not
 
 ```
 let num = 12345;
@@ -115,7 +115,7 @@ if (tmp == rev) {
 }
 ```
 
-# 9. Prime Number
+## 9. Prime Number
 
 ```
 let num = 6;
@@ -137,7 +137,7 @@ if (num == 1) {
 }
 ```
 
-# 10. Neon Number
+## 10. Neon Number
 
 ```
 let num = 9;
@@ -156,7 +156,7 @@ if (tmp == sum) {
 }
 ```
 
-# 11. Check the given number is armstrong number or not
+## 11. Check the given number is armstrong number or not
 
 ```
 let num = 153;
@@ -185,7 +185,7 @@ if (sum == tmp) {
 }
 ```
 
-# 12. Check the given number is strong number or not
+## 12. Check the given number is strong number or not
 
 ```
 let num = 145;
@@ -207,7 +207,7 @@ if (tmp == sum) {
 }
 ```
 
-# 13. Check the given number is perfect number or not
+## 13. Check the given number is perfect number or not
 
 ```
 let num = 6;
@@ -225,7 +225,7 @@ if (sum == num) {
 }
 ```
 
-# 14. automorphic number
+## 14. automorphic number
 
 ```
 let num = 25;
@@ -251,7 +251,7 @@ if (temp === tmp) {
 }
 ```
 
-# 15. Write a program to print palindrom number in a given range
+## 15. Write a program to print palindrom number in a given range
 
 ```
 for (let i = 1; i <= 100; i++) {
@@ -268,7 +268,7 @@ for (let i = 1; i <= 100; i++) {
 }
 ```
 
-# 16. Write a program to print alternative palindrome
+## 16. Write a program to print alternative palindrome
 
 ```
 let count = 0;
@@ -291,7 +291,7 @@ for (let i = 1; i <= 100; i++) {
 
 ```
 
-# 17. Write a program to find second highest palindrom in a given range
+## 17. Write a program to find second highest palindrom in a given range
 
 ```
 let max = 0,
@@ -315,7 +315,7 @@ for (let i = 1; i <= 100; i++) {
 console.log(secondmax);
 ```
 
-# 18. Write a program to find second highest palindrom in a given range
+## 18. Write a program to find second highest palindrom in a given range
 
 ```
 let count = 1;
@@ -337,7 +337,7 @@ for (let i = 100; i >= 1; i--) {
 }
 ```
 
-# 19. Write a program to print next palindrom number
+## 19. Write a program to print next palindrom number
 
 ```
 let num = 77;
@@ -359,7 +359,7 @@ while (true) {
 }
 ```
 
-# 20. Print prime number in a given range
+## 20. Print prime number in a given range
 
 ```
 function main() {
@@ -383,7 +383,7 @@ function isPrime(num) {
 main();
 ```
 
-# 21. Alternative prime number
+## 21. Alternative prime number
 
 ```
 main();
@@ -405,7 +405,7 @@ function isPrime(num) {
 
 ```
 
-# 22. Print last 3 prime number in a given range
+## 22. Print last 3 prime number in a given range
 
 ```
 function main() {
@@ -434,7 +434,7 @@ function isPrime(num) {
 main();
 ```
 
-# 23. Print first 3 prime number in a given range
+## 23. Print first 3 prime number in a given range
 
 ```
 function main() {
@@ -463,7 +463,7 @@ function isPrime(num) {
 main();
 ```
 
-# 24. Print next prime number
+## 24. Print next prime number
 
 ```
 function main() {
@@ -492,7 +492,7 @@ function isPrime(num) {
 main();
 ```
 
-# 25. take user number given next number to get prime number
+## 25. take user number given next number to get prime number
 
 ```
 function main() {
@@ -523,7 +523,7 @@ function isPrime(num) {
 main();
 ```
 
-# 26. write a program to print automorphic numbers in a given range
+## 26. write a program to print automorphic numbers in a given range
 
 ```
 function main() {
@@ -550,7 +550,7 @@ function automorphic(num) {
 main();
 ```
 
-# 27.
+## 27.
 
 ```
 *****
@@ -571,7 +571,7 @@ for (let i = 1; i <= 5; i++) {
 console.log(res);
 ```
 
-# 28.
+## 28.
 
 ```
 11111
@@ -592,7 +592,7 @@ for (let i = 1; i <= 5; i++) {
 console.log(res);
 ```
 
-# 29.
+## 29.
 
 ```
 *
@@ -613,7 +613,7 @@ for (let i = 1; i <= 5; i++) {
 console.log(res);
 ```
 
-# 30.
+## 30.
 
 ```
 *****
@@ -634,7 +634,7 @@ for (let i = 1; i <= 5; i++) {
 console.log(res);
 ```
 
-# 31.
+## 31.
 
 ```
 *****
@@ -657,7 +657,7 @@ for (let i = 1; i <= 5; i++) {
 console.log(res);
 ```
 
-# 32.
+## 32.
 
 ```
 * * * * *
@@ -682,7 +682,7 @@ for (let i = 1; i <= 5; i++) {
 console.log(res);
 ```
 
-# 33.
+## 33.
 
 ```
 *****
@@ -707,7 +707,7 @@ for (let i = 1; i <= 5; i++) {
 console.log(res);
 ```
 
-# 34.
+## 34.
 
 ```
 * * * * *
@@ -733,7 +733,7 @@ for (let i = 1; i <= 5; i++) {
 console.log(res);
 ```
 
-# 35.
+## 35.
 
 ```
 *   *   *
@@ -758,7 +758,7 @@ for (let i = 1; i <= 5; i++) {
 console.log(res);
 ```
 
-# 36.
+## 36.
 
 ```
 1 * * * *
@@ -783,7 +783,7 @@ for (let i = 1; i <= 5; i++) {
 console.log(res);
 ```
 
-# 37.
+## 37.
 
 ```
 1 * * * 1
@@ -808,7 +808,7 @@ for (let i = 1; i <= 5; i++) {
 console.log(res);
 ```
 
-# 38.
+## 38.
 
 ```
 1
@@ -829,7 +829,7 @@ for (let i = 1; i <= 5; i++) {
 console.log(res);
 ```
 
-# 39.
+## 39.
 
 ```
 5
@@ -850,7 +850,7 @@ for (let i = 5; i >= 1; i--) {
 console.log(res);
 ```
 
-# 40
+## 40
 
 ```
 5
@@ -871,7 +871,7 @@ for (let i = 5; i >= 1; i--) {
 console.log(res);
 ```
 
-# 41.
+## 41.
 
 ```
 *
@@ -897,7 +897,7 @@ for (let i = 1; i <= 5; i++) {
 console.log(res);
 ```
 
-# 42.
+## 42.
 
 ```
 * * * * *
@@ -921,7 +921,7 @@ for (let i = 5; i >= 1; i--) {
 console.log(res);
 ```
 
-# 43.
+## 43.
 
 ```
 1 2 3 4 5
