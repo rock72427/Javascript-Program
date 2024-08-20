@@ -1,11 +1,20 @@
-let res = "";
-for (let i = 5; i >= 1; i--) {
-  for (let j = 5; j > i; j--) {
-    res += "  ";
+main();
+function main() {
+  let count = 0;
+  for (let i = 2; i < 50; i++) {
+    if (prime(i)) {
+      if (count % 2 == 0) {
+        console.log(i);
+      }
+      count++;
+    }
   }
-  for (let j = 5; j >= 6 - i; j--) {
-    res += j + " ";
-  }
-  res += "\n";
 }
-console.log(res);
+function prime(num) {
+  for (let i = 2; i < num; i++) {
+    if (num % i == 0) {
+      return false;
+    }
+  }
+  return true;
+}

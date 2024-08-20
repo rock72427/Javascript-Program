@@ -388,13 +388,17 @@ main();
 ```
 main();
 function main() {
-  for (let i = 20; i >= 2; i--) {
-    if (isPrime(i)) {
-      console.log(i);
+  let count = 0;
+  for (let i = 2; i < 50; i++) {
+    if (prime(i)) {
+      if (count % 2 == 0) {
+        console.log(i);
+      }
+      count++;
     }
   }
 }
-function isPrime(num) {
+function prime(num) {
   for (let i = 2; i < num; i++) {
     if (num % i == 0) {
       return false;
@@ -402,6 +406,7 @@ function isPrime(num) {
   }
   return true;
 }
+
 
 ```
 
@@ -987,6 +992,27 @@ for (let i = 5; i >= 1; i--) {
   }
   for (let j = 5; j >= 6 - i; j--) {
     res += j + " ";
+  }
+  res += "\n";
+}
+console.log(res);
+```
+
+# 46.
+
+```
+ 5
+ 5  4
+ 5  4  3
+ 5  4  3  2
+ 5  4  3  2  1
+```
+
+```
+let res = "";
+for (let i = 5; i >= 1; i--) {
+  for (let j = 5; j >= i; j--) {
+    res += ` ${j} `;
   }
   res += "\n";
 }
