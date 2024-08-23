@@ -1,20 +1,15 @@
-main();
-function main() {
-  let count = 0;
-  for (let i = 2; i < 50; i++) {
-    if (prime(i)) {
-      if (count % 2 == 0) {
-        console.log(i);
-      }
-      count++;
+// Write a program to check weather the given string is palindrome or not
+function palindrome(string) {
+  string = string.toLowerCase().trim();
+  let i = 0;
+  let j = string.length - 1;
+  while (i < j) {
+    if (string.charAt(i) != string.charAt(j)) {
+      return "Not a palindrome";
     }
+    i++;
+    j--;
+    return "palindrome";
   }
 }
-function prime(num) {
-  for (let i = 2; i < num; i++) {
-    if (num % i == 0) {
-      return false;
-    }
-  }
-  return true;
-}
+console.log(palindrome("ava"));

@@ -1018,3 +1018,247 @@ for (let i = 5; i >= 1; i--) {
 }
 console.log(res);
 ```
+
+# 47.
+
+```
+        *
+      * * *
+    * * * * *
+  * * * * * * *
+* * * * * * * * *
+```
+
+```
+let n = 5;
+let res = "";
+let stars = 1;
+let spaces = 9;
+for (let i = 1; i <= n; i++) {
+  for (let j = 1; j <= spaces; j++) {
+    res += "  ";
+  }
+
+  for (let j = 1; j <= stars; j++) {
+    res += "* ";
+  }
+  res += "\n";
+  spaces--;
+  stars += 2;
+}
+console.log(res);
+```
+
+# 48.
+
+```
+* * * * * * * * *
+  * * * * * * *
+    * * * * *
+      * * *
+        *
+```
+
+```
+let n = 5;
+let res = "";
+let stars = 9;
+let spaces = 0;
+for (let i = 1; i <= n; i++) {
+  for (let j = 1; j <= spaces; j++) {
+    res += "  ";
+  }
+
+  for (let j = 1; j <= stars; j++) {
+    res += "* ";
+  }
+  res += "\n";
+  spaces++;
+  stars -= 2;
+}
+console.log(res);
+```
+
+# 49.
+
+```
+        *
+      *   *
+    *       *
+  *           *
+* * * * * * * * *
+```
+
+```
+let n = 5;
+let res = "";
+for (let i = 1; i <= n; i++) {
+  for (let j = 1; j <= n - i; j++) {
+    res += "  ";
+  }
+  for (let j = 1; j <= 2 * i - 1; j++) {
+    if (j == 1 || j == 2 * i - 1 || i == n) {
+      res += "* ";
+    } else {
+      res += "  ";
+    }
+  }
+  res += "\n";
+}
+console.log(res);
+```
+
+# 50.
+
+```
+* * * * * * * * *
+  *           *
+    *       *
+      *   *
+        *
+```
+
+```
+let n = 5;
+let res = "";
+for (let i = 0; i < n; i++) {
+  for (let j = 0; j < i; j++) {
+    res += "  ";
+  }
+  for (let j = 0; j < 2 * (n - i) - 1; j++) {
+    if (j == 0 || j == 2 * (n - i) - 2 || i == 0) {
+      res += "* ";
+    } else {
+      res += "  ";
+    }
+  }
+  res += "\n";
+}
+console.log(res);
+```
+
+# 51.
+
+```
+*
+* *
+* * *
+* * * *
+* * * * *
+* * * *
+* * *
+* *
+*
+```
+
+```
+let res = "";
+let stars = 1;
+let n = 9;
+for (let i = 1; i <= n; i++) {
+  for (let j = 1; j <= stars; j++) {
+    res += "* ";
+  }
+  res += "\n";
+  if (i <= n / 2) {
+    stars++;
+  } else {
+    stars--;
+  }
+}
+console.log(res);
+```
+
+# 52.
+
+```
+        *
+      * *
+    * * *
+  * * * *
+* * * * *
+  * * * *
+    * * *
+      * *
+        *
+```
+
+```
+let res = "";
+let n = 9;
+let stars = 1;
+let spaces = 4;
+for (let i = 1; i <= n; i++) {
+  for (let j = 1; j <= spaces; j++) {
+    res += "  ";
+  }
+  for (let j = 1; j <= stars; j++) {
+    res += "* ";
+  }
+  res += "\n";
+  if (i <= n / 2) {
+    stars++;
+    spaces--;
+  } else {
+    stars--;
+    spaces++;
+  }
+}
+console.log(res);
+```
+
+# at Method
+
+- If we want to take each character from the given string then we can use at method.
+
+#### Syntax
+
+```
+at(index)
+```
+
+- The return type of at method is one string.
+
+# 53. Write a program to reverse a given string
+
+```
+let string = "Javascript";
+let output = "";
+for (let i = string.length - 1; i >= 0; i--) {
+  output += string.charAt(i);
+}
+console.log(output);
+```
+
+# 54. Write a program to check weather the given string is palindrome or not
+
+```
+let string = "sos";
+let output = "";
+for (let i = string.length - 1; i >= 0; i--) {
+  output += string[i];
+}
+if (output == string) {
+  console.log("the given string is palindrome");
+} else {
+  console.log("the given string in not palindrome");
+}
+```
+
+```
+function palindrome(string) {
+  string = string.toLowerCase().trim();
+  let i = 0;
+  let j = string.length - 1;
+  while (i < j) {
+    if (string.charAt(i) != string.charAt(j)) {
+      return "Not a palindrome";
+    }
+    i++;
+    j--;
+    return "palindrome";
+  }
+}
+console.log(palindrome("Java"));
+
+```
