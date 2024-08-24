@@ -1262,3 +1262,156 @@ function palindrome(string) {
 console.log(palindrome("Java"));
 
 ```
+
+# 55. write a program to print the palindrome of substring
+
+```
+let s1 = "malayalam";
+for (let i = 0; i < s1.length; i++) {
+  for (let j = i + 1; j < s1.length; j++) {
+    let str = s1.slice(i, j + 1);
+    if (palindrome(str)) {
+      console.log(str);
+    }
+  }
+}
+function palindrome(string) {
+  string = string.toLowerCase().trim();
+  let i = 0;
+  let j = string.length - 1;
+  while (i < j) {
+    if (string.charAt(i) != string.charAt(j)) {
+      return false;
+    }
+    i++;
+    j--;
+    return true;
+  }
+}
+```
+
+# 56. Write a program to print the biggest palindrome of substring
+
+```
+let s1 = "malayalam";
+let long = "";
+
+for (let i = 0; i < s1.length; i++) {
+  for (let j = i + 1; j < s1.length; j++) {
+    let str = s1.slice(i, j + 1);
+    if (palindrome(str) && str.length > long.length) {
+      long = str;
+    }
+  }
+}
+
+function palindrome(string) {
+  string = string.toLowerCase().trim();
+  let i = 0;
+  let j = string.length - 1;
+  while (i < j) {
+    if (string.charAt(i) != string.charAt(j)) {
+      return false;
+    }
+    i++;
+    j--;
+  }
+  return true;
+}
+
+console.log(long);
+
+```
+
+```
+let s1 = "Javascript";
+s1 = s1.toUpperCase(s1);
+console.log(s1);
+
+let s2 = "Javascript";
+s2.toUpperCase(s2);
+console.log(s2);
+```
+
+# 57. Write a program to find occurance of each character
+
+```
+let string = "banana";
+let arr = [...string];
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] == " ") continue;
+  let count = 1;
+  for (let j = i + 1; j < arr.length; j++) {
+    if (arr[i] == arr[j]) {
+      count++;
+      arr[j] = " ";
+    }
+  }
+  console.log(`${arr[i]} = ${count}`);
+}
+```
+
+# 58. Write a program to remove duplicate character in a given string
+
+```
+let string = "banana";
+let arr = [...string];
+for (let i = 0; i < arr.length; i++) {
+  for (let j = i + 1; j < arr.length; j++) {
+    if (arr[i] == arr[j]) {
+      arr[j] = " ";
+    }
+  }
+  // console.log(arr[i]);
+}
+let result = arr.filter((e) => e != " ");
+console.log(result);
+```
+
+# 59. Writea program to find maximum repeated character in a repeated string
+
+```
+let string = "banana";
+let arr = [...string];
+let max = 0;
+let res = "";
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] == " ") continue;
+  let count = 1;
+  for (let j = i + 1; j < arr.length; j++) {
+    if (arr[i] == arr[j]) {
+      count++;
+      arr[j] = " ";
+    }
+  }
+  if (count > max) {
+    max = count;
+    res = arr[i];
+  }
+}
+console.log(`${res} = ${max}`);
+```
+
+# 60. Write a program to print minimum repeated character in a given string
+
+```
+let string = "banana";
+let arr = [...string];
+let min = Infinity;
+let res = "";
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] == " ") continue;
+  let count = 1;
+  for (let j = i + 1; j < arr.length; j++) {
+    if (arr[i] == arr[j]) {
+      count++;
+      arr[j] = " ";
+    }
+  }
+  if (count < min) {
+    min = count;
+    res = arr[i];
+  }
+}
+console.log(`${res} = ${min}`);
+```

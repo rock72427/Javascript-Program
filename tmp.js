@@ -115,31 +115,3 @@ for (let i = 8; i >= 3; i--) {
 // 5 4 3
 // 4 3
 // 3
-
-let rows = 5;
-let pattern = "";
-for (let i = 1; i <= rows; i++) {
-  for (let j = 1; j <= i; j++) {
-    pattern += "* ";
-  }
-  for (let k = 1; k <= (rows - i) * 2; k++) {
-    pattern += "  ";
-  }
-  for (let l = 1; l <= i; l++) {
-    pattern += "* ";
-  }
-  pattern += "\n";
-}
-for (let i = rows; i >= 1; i--) {
-  for (let j = 1; j <= i; j++) {
-    pattern += "* ";
-  }
-  for (let k = 1; k <= (rows - i) * 2; k++) {
-    pattern += "  ";
-  }
-  for (let l = 1; l <= i; l++) {
-    pattern += "* ";
-  }
-  pattern += "\n";
-}
-console.log(pattern);
