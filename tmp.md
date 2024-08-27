@@ -1498,7 +1498,7 @@ for (let i = 0; i < arr.length; i++) {
 console.log(`${res} = ${min}`);
 ```
 
-#65. Write a program to find vowels in a given string
+# 65. Write a program to find vowels in a given string
 
 ```
 let s1 = "Dhruva@JSP12345";
@@ -1556,32 +1556,6 @@ console.log(sum);
 # 66. Write a program to reverse each word
 
 ```
-let str = "Hello World";
-let result = "";
-let temp = "";
-
-for (let i = 0; i < str.length; i++) {
-  if (str[i] === " ") {
-    for (let j = temp.length - 1; j >= 0; j--) {
-      result += temp[j];
-    }
-    result += " ";
-    temp = "";
-  } else {
-    temp += str[i];
-  }
-}
-
-for (let i = temp.length - 1; i >= 0; i--) {
-  result += temp[i];
-}
-
-console.log(result);
-```
-
-# 67. "Javascript is very easy" reverse the code there itself
-
-```
 let str = "Javascript is very easy";
 let rev = "";
 
@@ -1590,4 +1564,77 @@ for (let i = str.length - 1; i >= 0; i--) {
 }
 
 console.log(rev);
+```
+
+# 67. "Javascript is very easy" reverse the code there itself
+
+```
+let str = "Javascript is very easy";
+let arr = str.split(" ");
+let rev = "";
+
+for (let i = 0; i < arr.length; i++) {
+  let s = arr[i];
+  for (let j = s.length - 1; j >= 0; j--) {
+    rev += s.charAt(j);
+  }
+  rev += " ";
+}
+console.log(rev);
+
+```
+
+# 68. Write a program to check the given string is anagram or not
+
+```
+function isAnagram(str1, str2) {
+  if (str1.length != str2.length) return "Not an Anagram";
+  let arr = [...str1];
+  let brr = [...str2];
+  arr = arr.sort();
+  brr = brr.sort();
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] != brr[i]) {
+      return "Not an Anagram";
+    }
+    return "Anagram";
+  }
+}
+
+console.log(isAnagram("race", "care"));
+```
+
+# 69. Write a pogram to replace a string without using replace method
+
+```
+let str = "pool";
+let arr = [...str];
+let replace = "";
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] == "o") {
+    arr[i] = "x";
+    replace += arr[i];
+  } else {
+    replace += arr[i];
+  }
+}
+console.log(replace);
+```
+
+```
+let str = "Hello world";
+let res = "";
+for (let i = 0; i < str.length; i++) {
+  if (
+    str.charAt(i) == "l" &&
+    str.charAt(i + 1) == "l" &&
+    str.charAt(i + 2) == "o"
+  ) {
+    res += "xx";
+    i += 2;
+  } else {
+    res += str.charAt(i);
+  }
+}
+console.log(res);
 ```
