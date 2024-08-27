@@ -1256,8 +1256,8 @@ function palindrome(string) {
     }
     i++;
     j--;
-    return "palindrome";
   }
+  return "palindrome";
 }
 console.log(palindrome("Java"));
 
@@ -1285,8 +1285,8 @@ function palindrome(string) {
     }
     i++;
     j--;
-    return true;
   }
+  return true;
 }
 ```
 
@@ -1414,4 +1414,180 @@ for (let i = 0; i < arr.length; i++) {
   }
 }
 console.log(`${res} = ${min}`);
+```
+
+# 61. Write a program to find ocurrence fo each word
+
+```
+let string = "if you smell what that the rock is cooking";
+let arr = string.split(" ");
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] == " ") continue;
+  let count = 1;
+  for (let j = i + 1; j < arr.length; j++) {
+    if (arr[i] == arr[j]) {
+      count++;
+      arr[j] = " ";
+    }
+  }
+  console.log(`${arr[i]} = ${count}`);
+}
+```
+
+# 62. remove duplicate words in a given string
+
+```
+let string = "if you smell what that the rock is cooking";
+let arr = string.split(" ");
+for (let i = 0; i < arr.length; i++) {
+  for (let j = i + 1; j < arr.length; j++) {
+    if (arr[i] == arr[j]) {
+      arr[j] = " ";
+    }
+  }
+}
+let result = arr.filter((e) => e != " ");
+console.log(result);
+```
+
+# 63. maximum repeated words in a given string
+
+```
+let string = "if you smell what that the rock is cooking";
+let arr = string.split(" ");
+let max = 0;
+let res = "";
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] == " ") continue;
+  let count = 1;
+  for (let j = i + 1; j < arr.length; j++) {
+    if (arr[i] == arr[j]) {
+      count++;
+      arr[j] = " ";
+    }
+  }
+  if (count > max) {
+    max = count;
+    res = arr[i];
+  }
+}
+console.log(`${res} = ${max}`);
+```
+
+# 64. minimum repeated word in a given string
+
+```
+let string = "if you smell what that the rock is cooking";
+let arr = string.split(" ");
+let min = Infinity;
+let res = "";
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] == " ") continue;
+  let count = 1;
+  for (let j = i + 1; j < arr.length; j++) {
+    if (arr[i] == arr[j]) {
+      count++;
+      arr[j] = " ";
+    }
+  }
+  if (count < min) {
+    min = count;
+    res = arr[i];
+  }
+}
+console.log(`${res} = ${min}`);
+```
+
+#65. Write a program to find vowels in a given string
+
+```
+let s1 = "Dhruva@JSP12345";
+s1 = s1.toLowerCase();
+let count = 0;
+let consonent = 0;
+for (let i = 0; i < s1.length; i++) {
+  let ch = s1.charAt(i);
+  if (ch >= "a" && ch <= "z") {
+    if (ch == "a" || ch == "e" || ch == "i" || ch == "o" || ch == "u") {
+      count++;
+    } else {
+      consonent++;
+    }
+  }
+}
+console.log("vowels = " + count);
+console.log("consonent = " + consonent);
+console.log("length = " + s1.length);
+```
+
+# 65. Write a program to find sum of digit in a given string
+
+```
+let string = "123csetr";
+let sum = 0;
+for (let i = 0; i < string.length; i++) {
+  let ch = string.charAt(i);
+  if (ch >= "0" && ch <= "9") {
+    sum += +ch;
+  }
+}
+console.log(sum);
+```
+
+```
+let string = "Dhruva123Kumar45";
+let store = "";
+let sum = 0;
+for (let i = 0; i < string.length; i++) {
+  let ch = string.charAt(i);
+  if (ch >= "0" && ch <= "9") {
+    store += ch;
+  } else if (store !== "") {
+    sum += +store;
+    store = "";
+  }
+  if (i == string.length - 1) {
+    sum += +store;
+  }
+}
+console.log(sum);
+```
+
+# 66. Write a program to reverse each word
+
+```
+let str = "Hello World";
+let result = "";
+let temp = "";
+
+for (let i = 0; i < str.length; i++) {
+  if (str[i] === " ") {
+    for (let j = temp.length - 1; j >= 0; j--) {
+      result += temp[j];
+    }
+    result += " ";
+    temp = "";
+  } else {
+    temp += str[i];
+  }
+}
+
+for (let i = temp.length - 1; i >= 0; i--) {
+  result += temp[i];
+}
+
+console.log(result);
+```
+
+# 67. "Javascript is very easy" reverse the code there itself
+
+```
+let str = "Javascript is very easy";
+let rev = "";
+
+for (let i = str.length - 1; i >= 0; i--) {
+  rev += str[i];
+}
+
+console.log(rev);
 ```

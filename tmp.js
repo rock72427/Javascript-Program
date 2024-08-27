@@ -1,87 +1,3 @@
-// let res = "";
-// for (let i = 5; i >= 1; i--) {
-//   for (let j = 1; j <= i; j++) {
-//     res += `  `;
-//   }
-//   for (let j = i; j <= 5; j++) {
-//     res += `* `;
-//   }
-//   res += "\n";
-// }
-// console.log(res);
-
-// let res = "";
-// for (let i = 1; i <= 5; i++) {
-//   for (let j = 5; j >= i; j--) {
-//     res += `  `;
-//   }
-//   for (let j = 1; j <= i; j++) {
-//     res += `${j} `;
-//   }
-//   res += "\n";
-// }
-// console.log(res);
-
-// let res = "";
-// for (let i = 1; i <= 5; i++) {
-//   for (let j = 5; j >= i; j--) {
-//     res += `  `;
-//   }
-//   for (let j = i; j >= 1; j--) {
-//     res += `${j} `;
-//   }
-//   res += "\n";
-// }
-// console.log(res);
-
-// let res = "";
-// for (let i = 5; i >= 1; i--) {
-//   for (let j = 1; j <= i; j++) {
-//     res += `  `;
-//   }
-//   for (let j = i; j <= 5; j++) {
-//     res += `${j} `;
-//   }
-//   res += "\n";
-// }
-// console.log(res);
-
-// let res = "";
-// for (let i = 5; i >= 1; i--) {
-//   for (let j = 1; j <= i; j++) {
-//     res += `  `;
-//   }
-//   for (let j = 5; j >= i; j--) {
-//     res += `${j} `;
-//   }
-//   res += "\n";
-// }
-// console.log(res);
-
-// let res = "";
-// for (let i = 1; i <= 5; i++) {
-//   for (let j = 1; j <= i; j++) {
-//     res += "  ";
-//   }
-//   for (let j = 5; j >= i; j--) {
-//     res += `${j} `;
-//   }
-//   res += "\n";
-// }
-// console.log(res);
-
-// let res = "";
-// for (let i = 5; i >= 1; i--) {
-//   for (let j = 5; j >= i; j--) {
-//     res += "  ";
-//   }
-//   for (let j = i; j >= 1; j--) {
-//     res += `${j} `;
-//   }
-//   res += "\n";
-// }
-// console.log(res);
-
 let k = 3;
 for (let i = 8; i >= 3; i--) {
   let output = "";
@@ -115,3 +31,5 @@ for (let i = 8; i >= 3; i--) {
 // 5 4 3
 // 4 3
 // 3
+
+// Write a program to check the given string is anagram or not
