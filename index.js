@@ -1,19 +1,13 @@
-// Write a program to print first non repeating character in a given string
-let string = "aabbcddef";
-let arr = [...string];
-let result = "";
-let min = Infinity;
-for (let i = 0; i < arr.length; i++) {
-  if (arr[i] == " ") continue;
-  let count = 1;
-  if (arr[i] == arr[i + 1]) {
-    count++;
-    arr[i + 1] = " ";
-  }
-  if (count < min) {
-    min = count;
-    result = arr[i];
+let arr = [7, 1, 9, 2, 4, 6];
+for (let i = 0; i < arr.length - 1; i++) {
+  for (let j = 0; j < arr.length - 1 - i; j++) {
+    if (arr[j] > arr[j + 1]) {
+      let temp = arr[j];
+      arr[j] = arr[j + 1];
+      arr[j + 1] = temp;
+    }
   }
 }
-
-console.log(result + " " + min);
+for (let e of arr) {
+  console.log(e);
+}

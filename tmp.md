@@ -1638,3 +1638,88 @@ for (let i = 0; i < str.length; i++) {
 }
 console.log(res);
 ```
+
+# 70. Write a program to print sum or array
+
+```
+let arr = [10, 20, 30, 40, 50];
+let sum = 0;
+for (let i = 0; i < arr.length; i++) {
+  sum += arr[i];
+}
+console.log(sum);
+```
+
+# Searching
+
+## 71. Linear Search
+
+```
+let arr = [10, 20, 30, 40, 50, 60];
+let key = 50;
+let flag = false;
+
+for (let i = 0; i < arr.length; i++) {
+  if (key == arr[i]) {
+    flag = true;
+    break;
+  }
+}
+
+if (flag) {
+  console.log(`${key} is available`);
+} else {
+  console.log(`${key} is not available`);
+}
+```
+
+## 72. Binary Search
+
+```
+let arr = [10, 20, 30, 40, 50, 60];
+let key = 10;
+
+function binarySearch(arr, key, i, j) {
+  while (i <= j) {
+    let mid = Math.trunc((i + j) / 2);
+
+    if (arr[mid] === key) {
+      return mid;
+    } else if (arr[mid] < key) {
+      i = mid + 1;
+    } else {
+      j = mid - 1;
+    }
+  }
+
+  return false;
+}
+
+const result = binarySearch(arr, key, 0, arr.length - 1);
+
+if (result) {
+  console.log(`Element ${key} found at index ${result}`);
+} else {
+  console.log(`Element ${key} not found in the array`);
+}
+```
+
+# Sorting
+
+# 73. Bubble Sort
+
+```
+let arr = [7, 1, 9, 2, 4, 6];
+for (let i = 0; i < arr.length - 1; i++) {
+  for (let j = 0; j < arr.length - 1 - i; j++) {
+    if (arr[j] > arr[j + 1]) {
+      let temp = arr[j];
+      arr[j] = arr[j + 1];
+      arr[j + 1] = temp;
+    }
+  }
+}
+for (let e of arr) {
+  console.log(e);
+}
+```
