@@ -1,13 +1,17 @@
-let arr = [7, 1, 9, 2, 4, 6];
-for (let i = 0; i < arr.length - 1; i++) {
-  for (let j = 0; j < arr.length - 1 - i; j++) {
-    if (arr[j] > arr[j + 1]) {
-      let temp = arr[j];
-      arr[j] = arr[j + 1];
-      arr[j + 1] = temp;
+function anagrams(str1, str2) {
+  if (str1.length !== str2.length) return false;
+
+  let a1 = [...str1];
+  let b1 = [...str2];
+
+  a1 = a1.sort();
+  b1 = b1.sort();
+  for (let i = 0; i < a1.length; i++) {
+    if (a1[i] !== b1[i]) {
+      return false;
     }
   }
+  return true;
 }
-for (let e of arr) {
-  console.log(e);
-}
+
+console.log(anagrams("care", "race"));

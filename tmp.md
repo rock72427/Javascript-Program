@@ -1587,21 +1587,23 @@ console.log(rev);
 # 68. Write a program to check the given string is anagram or not
 
 ```
-function isAnagram(str1, str2) {
-  if (str1.length != str2.length) return "Not an Anagram";
-  let arr = [...str1];
-  let brr = [...str2];
-  arr = arr.sort();
-  brr = brr.sort();
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] != brr[i]) {
-      return "Not an Anagram";
+function anagram(str1, str2) {
+  if (str1.length !== str2.length) return false;
+
+  let a1 = [...str1];
+  let b1 = [...str2];
+
+  a1 = a1.sort();
+  b1 = b1.sort();
+  for (let i = 0; i < a1.length; i++) {
+    if (a1[i] !== b1[i]) {
+      return false;
     }
-    return "Anagram";
   }
+  return true;
 }
 
-console.log(isAnagram("race", "care"));
+console.log(anagram("care", "race"));
 ```
 
 # 69. Write a pogram to replace a string without using replace method
