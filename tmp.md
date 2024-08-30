@@ -1823,3 +1823,82 @@ for (let i = 1; i < arr.length; i++) {
 console.log("Second smallest element: " + secondMin);
 console.log("Second highest element: " + secondMax);
 ```
+
+## 78. Merge Sort
+
+```
+main();
+
+function main() {
+  let arr = [4, 9, 1, 2, 6, 8, 7];
+  sort(arr);
+  for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+  }
+}
+
+function sort(arr) {
+  if (arr.length <= 1) return;
+  let mid = Math.trunc(arr.length / 2);
+  let left = [];
+  let right = [];
+  for (let i = 0; i < mid; i++) {
+    left[i] = arr[i];
+  }
+  for (let j = 0; j < arr.length - left.length; j++) {
+    right[j] = arr[j + mid];
+  }
+  sort(left);
+  sort(right);
+  merge(left, right, arr);
+}
+
+function merge(a, b, c) {
+  let i = 0;
+  let j = 0;
+  let k = 0;
+  while (i < a.length && j < b.length) {
+    if (a[i] < b[j]) {
+      c[k++] = a[i++];
+    } else {
+      c[k++] = b[j++];
+    }
+  }
+  while (i < a.length) {
+    c[k++] = a[i++];
+  }
+  while (j < b.length) {
+    c[k++] = b[j++];
+  }
+}
+```
+
+## 79. Quick Sort
+
+```
+function quickSort(arr) {
+  if (arr.length <= 1) {
+    return arr;
+  }
+
+  const pivot = arr[Math.floor(arr.length / 2)];
+  const left = [];
+  const right = [];
+  const equal = [];
+
+  for (const el of arr) {
+    if (el < pivot) {
+      left.push(el);
+    } else if (el > pivot) {
+      right.push(el);
+    } else {
+      equal.push(el);
+    }
+  }
+
+  return [...quickSort(left), ...equal, ...quickSort(right)];
+}
+const array = [3, 6, 8, 10, 1, 2, 1];
+const sortedArray = quickSort(array);
+console.log(sortedArray);
+```
