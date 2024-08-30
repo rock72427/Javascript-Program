@@ -950,7 +950,7 @@ for (let i = 1; i <= 5; i++) {
 console.log(res);
 ```
 
-# 44.
+## 44.
 
 ```
 1 2 3 4 5
@@ -974,7 +974,7 @@ for (let i = 5; i >= 1; i--) {
 console.log(res);
 ```
 
-# 45.
+## 45.
 
 ```
 5 4 3 2 1
@@ -998,7 +998,7 @@ for (let i = 5; i >= 1; i--) {
 console.log(res);
 ```
 
-# 46.
+## 46.
 
 ```
  5
@@ -1019,7 +1019,7 @@ for (let i = 5; i >= 1; i--) {
 console.log(res);
 ```
 
-# 47.
+## 47.
 
 ```
         *
@@ -1049,7 +1049,7 @@ for (let i = 1; i <= n; i++) {
 console.log(res);
 ```
 
-# 48.
+## 48.
 
 ```
 * * * * * * * * *
@@ -1079,7 +1079,7 @@ for (let i = 1; i <= n; i++) {
 console.log(res);
 ```
 
-# 49.
+## 49.
 
 ```
         *
@@ -1108,7 +1108,7 @@ for (let i = 1; i <= n; i++) {
 console.log(res);
 ```
 
-# 50.
+## 50.
 
 ```
 * * * * * * * * *
@@ -1137,7 +1137,7 @@ for (let i = 0; i < n; i++) {
 console.log(res);
 ```
 
-# 51.
+## 51.
 
 ```
 *
@@ -1169,7 +1169,7 @@ for (let i = 1; i <= n; i++) {
 console.log(res);
 ```
 
-# 52.
+## 52.
 
 ```
         *
@@ -1219,7 +1219,7 @@ at(index)
 
 - The return type of at method is one string.
 
-# 53. Write a program to reverse a given string
+## 53. Write a program to reverse a given string
 
 ```
 let string = "Javascript";
@@ -1230,7 +1230,7 @@ for (let i = string.length - 1; i >= 0; i--) {
 console.log(output);
 ```
 
-# 54. Write a program to check weather the given string is palindrome or not
+## 54. Write a program to check weather the given string is palindrome or not
 
 ```
 let string = "sos";
@@ -1263,7 +1263,7 @@ console.log(palindrome("Java"));
 
 ```
 
-# 55. write a program to print the palindrome of substring
+## 55. write a program to print the palindrome of substring
 
 ```
 let s1 = "malayalam";
@@ -1290,7 +1290,7 @@ function palindrome(string) {
 }
 ```
 
-# 56. Write a program to print the biggest palindrome of substring
+## 56. Write a program to print the biggest palindrome of substring
 
 ```
 let s1 = "malayalam";
@@ -1333,7 +1333,7 @@ s2.toUpperCase(s2);
 console.log(s2);
 ```
 
-# 57. Write a program to find occurance of each character
+## 57. Write a program to find occurance of each character
 
 ```
 let string = "banana";
@@ -1351,7 +1351,7 @@ for (let i = 0; i < arr.length; i++) {
 }
 ```
 
-# 58. Write a program to remove duplicate character in a given string
+## 58. Write a program to remove duplicate character in a given string
 
 ```
 let string = "banana";
@@ -1368,7 +1368,7 @@ let result = arr.filter((e) => e != " ");
 console.log(result);
 ```
 
-# 59. Writea program to find maximum repeated character in a repeated string
+## 59. Writea program to find maximum repeated character in a repeated string
 
 ```
 let string = "banana";
@@ -1392,7 +1392,7 @@ for (let i = 0; i < arr.length; i++) {
 console.log(`${res} = ${max}`);
 ```
 
-# 60. Write a program to print minimum repeated character in a given string
+## 60. Write a program to print minimum repeated character in a given string
 
 ```
 let string = "banana";
@@ -1416,7 +1416,7 @@ for (let i = 0; i < arr.length; i++) {
 console.log(`${res} = ${min}`);
 ```
 
-# 61. Write a program to find ocurrence fo each word
+## 61. Write a program to find ocurrence fo each word
 
 ```
 let string = "if you smell what that the rock is cooking";
@@ -1434,7 +1434,7 @@ for (let i = 0; i < arr.length; i++) {
 }
 ```
 
-# 62. remove duplicate words in a given string
+## 62. remove duplicate words in a given string
 
 ```
 let string = "if you smell what that the rock is cooking";
@@ -1450,7 +1450,7 @@ let result = arr.filter((e) => e != " ");
 console.log(result);
 ```
 
-# 63. maximum repeated words in a given string
+## 63. maximum repeated words in a given string
 
 ```
 let string = "if you smell what that the rock is cooking";
@@ -1474,7 +1474,7 @@ for (let i = 0; i < arr.length; i++) {
 console.log(`${res} = ${max}`);
 ```
 
-# 64. minimum repeated word in a given string
+## 64. minimum repeated word in a given string
 
 ```
 let string = "if you smell what that the rock is cooking";
@@ -1498,7 +1498,7 @@ for (let i = 0; i < arr.length; i++) {
 console.log(`${res} = ${min}`);
 ```
 
-# 65. Write a program to find vowels in a given string
+## 65. Write a program to find vowels in a given string
 
 ```
 let s1 = "Dhruva@JSP12345";
@@ -1520,7 +1520,7 @@ console.log("consonent = " + consonent);
 console.log("length = " + s1.length);
 ```
 
-# 65. Write a program to find sum of digit in a given string
+## 65. Write a program to find sum of digit in a given string
 
 ```
 let string = "123csetr";
@@ -1553,7 +1553,7 @@ for (let i = 0; i < string.length; i++) {
 console.log(sum);
 ```
 
-# 66. Write a program to reverse each word
+## 66. Write a program to reverse each word
 
 ```
 let str = "Javascript is very easy";
@@ -1566,7 +1566,7 @@ for (let i = str.length - 1; i >= 0; i--) {
 console.log(rev);
 ```
 
-# 67. "Javascript is very easy" reverse the code there itself
+## 67. "Javascript is very easy" reverse the code there itself
 
 ```
 let str = "Javascript is very easy";
@@ -1584,7 +1584,7 @@ console.log(rev);
 
 ```
 
-# 68. Write a program to check the given string is anagram or not
+## 68. Write a program to check the given string is anagram or not
 
 ```
 function anagram(str1, str2) {
@@ -1606,7 +1606,7 @@ function anagram(str1, str2) {
 console.log(anagram("care", "race"));
 ```
 
-# 69. Write a pogram to replace a string without using replace method
+## 69. Write a pogram to replace a string without using replace method
 
 ```
 let str = "pool";
@@ -1641,7 +1641,7 @@ for (let i = 0; i < str.length; i++) {
 console.log(res);
 ```
 
-# 70. Write a program to print sum or array
+## 70. Write a program to print sum or array
 
 ```
 let arr = [10, 20, 30, 40, 50];
@@ -1708,7 +1708,7 @@ if (result) {
 
 # Sorting
 
-# 73. Bubble Sort
+## 73. Bubble Sort
 
 ```
 let arr = [7, 1, 9, 2, 4, 6];
@@ -1724,4 +1724,102 @@ for (let i = 0; i < arr.length - 1; i++) {
 for (let e of arr) {
   console.log(e);
 }
+```
+
+## 74. Selection Sort
+
+```
+let arr = [9, 3, 4, 6, 1, 2];
+
+for (let i = 0; i < arr.length - 1; i++) {
+  let index = i;
+  for (let j = i + 1; j < arr.length; j++) {
+    if (arr[index] > arr[j]) {
+      index = j;
+    }
+  }
+  if (i !== index) {
+    let temp = arr[i];
+    arr[i] = arr[index];
+    arr[index] = temp;
+  }
+}
+
+let res = "";
+for (let i = 0; i < arr.length; i++) {
+  res += `${arr[i]} `;
+}
+
+console.log(res);
+```
+
+## 75. Insertion Sort
+
+```
+let arr = [4, 9, 1, 2, 3, 5];
+for (let i = 1; i < arr.length; i++) {
+  let j = i - 1;
+  let key = arr[i];
+  while (j >= 0 && arr[j] > key) {
+    arr[j + 1] = arr[j];
+    j--;
+  }
+  arr[j + 1] = key;
+}
+let res = "";
+for (let i = 0; i < arr.length; i++) {
+  res += `${arr[i]} `;
+}
+console.log(res);
+```
+
+## 76. Write a program to find minimum and maximum element in a given array
+
+```
+let arr = [12, 5, 8, 3, 9, 1, 7, 6, 4, 2];
+
+let min = arr[0];
+let max = arr[0];
+
+for (let i = 1; i < arr.length; i++) {
+  if (arr[i] < min) {
+    min = arr[i];
+  }
+  if (arr[i] > max) {
+    max = arr[i];
+  }
+}
+
+console.log("Minimum element: " + min);
+console.log("Maximum element: " + max);
+```
+
+## 77. Write a program to find second highest and second smallest in a given array
+
+```
+let arr = [12, 5, 8, 3, 9, 1, 7, 6, 4, 2];
+
+let min = arr[0];
+let max = arr[0];
+let secondMin = Infinity;
+let secondMax = -Infinity;
+
+for (let i = 1; i < arr.length; i++) {
+  if (arr[i] < min) {
+    secondMin = min;
+    min = arr[i];
+  } else if (arr[i] < secondMin && arr[i] !== min) {
+    secondMin = arr[i];
+  }
+
+  if (arr[i] > max) {
+    secondMax = max;
+    max = arr[i];
+  } else if (arr[i] > secondMax && arr[i] !== max) {
+    secondMax = arr[i];
+  }
+}
+
+console.log("Second smallest element: " + secondMin);
+console.log("Second highest element: " + secondMax);
 ```
